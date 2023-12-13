@@ -1,10 +1,11 @@
 class MoviesController < ApplicationController
   before_action :set_ratings, only: [:index, :show]
 
+
   def show
     @movie = Movie.find(params[:id])
   end
-
+  
   def index
     @movies = Movie.all
   
